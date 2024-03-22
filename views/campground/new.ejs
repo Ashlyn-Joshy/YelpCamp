@@ -1,0 +1,82 @@
+<%- layout('layout/boilerplate') %>
+<div class="row">
+  <div class="col-md-6">
+    <img
+      src="https://img.freepik.com/free-vector/tourist-female-standing-front-camping-tent-outdoor-nature-adventure-camping-illustration_1150-37297.jpg?t=st=1710967859~exp=1710971459~hmac=95cdd62312067076e1d89e063bab1cfd2ad19ee210fa6d744cdaff0190edce8b&w=996"
+      class="img-fluid"
+      alt="campground image"
+    />
+  </div>
+  <div class="col-md-6 my-5">
+    <h1 class="text-center">New Campground</h1>
+    <!-- this is for adding a new campground -->
+    <form
+      action="/campground"
+      method="post"
+      class="mb-3 form-validation"
+      novalidate
+      enctype="multipart/form-data"
+    >
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          name="Campground[title]"
+          id="title"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Please provide a valid data.</div>
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input
+          type="text"
+          name="Campground[location]"
+          id="location"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Please provide a valid data.</div>
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input
+          type="text"
+          name="Campground[price]"
+          id="price"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Please provide a valid data.</div>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload Images</label>
+        <input
+          class="form-control"
+          type="file"
+          id="image"
+          multiple
+          name="image"
+        />
+
+        <div class="invalid-feedback">Please provide a valid data.</div>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          name="Campground[description]"
+          id="description"
+          class="form-control"
+          required
+          rows="5"
+        ></textarea>
+        <div class="invalid-feedback">Please provide a valid data.</div>
+      </div>
+      <button class="btn btn-success">Add Campground</button>
+    </form>
+
+    <!-- this is for going back to allcampground page -->
+    <a href="/campground">Back</a>
+  </div>
+</div>

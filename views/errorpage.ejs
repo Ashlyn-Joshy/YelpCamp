@@ -1,0 +1,9 @@
+<%- layout('layout/boilerplate') %>
+<div class="row my-3">
+  <div class="col-6 offset-3">
+    <h1><%= err.message %></h1>
+    <% if (process.env.NODE_ENV !== "production") { %>
+    <p><%= err.stack %></p>
+    <% } %>
+  </div>
+</div>
