@@ -3,7 +3,8 @@ const city = require("./city");
 const { places, descriptors, user, img } = require("./seedHelpers");
 const Campground = require("../models/campground");
 
-mongoose.connect("mongodb://localhost:27017/yelpCamp");
+const dburl = process.env.DB_URL || "mongodb://localhost:27017/yelpCamp";
+mongoose.connect(dburl);
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
