@@ -9,6 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "18.13.0"
+  },
   "dependencies": {
     "@mapbox/mapbox-sdk": "^0.15.5",
     "cloudinary": "^1.41.3",
